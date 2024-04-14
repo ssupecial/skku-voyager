@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  backend:
+    build: ./skku-voyager-backend
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./skku-voyager-backend:/backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DJANGO_SETTINGS_MODULE=config.settings
+  frontend:
+    build: ./skku-voyager-frontend
+    volumes:
+      - ./skku-voyager-frontend:/frontend
+    ports:
+      - "4000:4000"

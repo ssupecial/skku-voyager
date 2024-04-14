@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "skku-voyager-backend"
+version = "0.1.0"
+description = ""
+authors = ["Kang-Eunsu <kanges802@g.skku.edu>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "skku_voyager_backend"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0"
+mysqlclient = "^2.2.1"
+pymysql = "^1.1.0"
+djangorestframework = "^3.14.0"
+django-cors-headers = "^4.3.1"
+pillow = "^10.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
